@@ -80,6 +80,16 @@ func SetDefaultConfig() {
 	viper.SetDefault("commands.add.messages.many_tracks_added", "<b>%s</b> added <b>%d</b> tracks to the queue.")
 	viper.SetDefault("commands.add.messages.num_tracks_too_long", "<br><b>%d</b> tracks could not be added due to error or because they are too long.")
 
+	viper.SetDefault("commands.addsecret.aliases", []string{"adds", "as"})
+	viper.SetDefault("commands.addsecret.is_admin", false)
+	viper.SetDefault("commands.addsecret.description", "Adds a track or playlist from a media site to the queue secretly (dont show the titles in the chat).")
+	viper.SetDefault("commands.addsecret.messages.no_url_error", "A URL must be supplied with the add command.")
+	viper.SetDefault("commands.addsecret.messages.no_valid_tracks_error", "No valid tracks were found with the provided URL(s).")
+	viper.SetDefault("commands.addsecret.messages.tracks_too_long_error", "Your track(s) were either too long or an error occurred while processing them. No track(s) have been added.")
+	viper.SetDefault("commands.addsecret.messages.one_track_added_secretly", "<b>%s</b> added a secret track to the queue...")
+	viper.SetDefault("commands.addsecret.messages.many_tracks_added", "<b>%s</b> added <b>%d</b> tracks to the queue.")
+	viper.SetDefault("commands.addsecret.messages.num_tracks_too_long", "<br><b>%d</b> tracks could not be added due to error or because they are too long.")
+
 	viper.SetDefault("commands.addnext.aliases", []string{"addnext", "an"})
 	viper.SetDefault("commands.addnext.is_admin", true)
 	viper.SetDefault("commands.addnext.description", "Adds a track or playlist from a media site as the next item in the queue.")
