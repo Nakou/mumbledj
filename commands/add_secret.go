@@ -16,23 +16,23 @@ import (
 	"github.com/spf13/viper"
 )
 
-// AddCommand is a command that adds an audio track associated with a supported
+// AddSecretCommand is a command that adds an audio track associated with a supported
 // URL to the queue.
 type AddSecretCommand struct{}
 
 // Aliases returns the current aliases for the command.
-func (c *AddCommand) Aliases() []string {
+func (c *AddSecretCommand) Aliases() []string {
 	return viper.GetStringSlice("commands.addsecret.aliases")
 }
 
 // Description returns the description for the command.
-func (c *AddCommand) Description() string {
+func (c *AddSecretCommand) Description() string {
 	return viper.GetString("commands.addsecret.description")
 }
 
 // IsAdminCommand returns true if the command is only for admin use, and
 // returns false otherwise.
-func (c *AddCommand) IsAdminCommand() bool {
+func (c *AddSecretCommand) IsAdminCommand() bool {
 	return viper.GetBool("commands.addsecret.is_admin")
 }
 
@@ -45,7 +45,7 @@ func (c *AddCommand) IsAdminCommand() bool {
 //            If no error has occurred, pass nil instead.
 // Example return statement:
 //    return "This is a private message!", true, nil
-func (c *AddCommand) Execute(user *gumble.User, args ...string) (string, bool, error) {
+func (c *AddSecretCommand) Execute(user *gumble.User, args ...string) (string, bool, error) {
 	var (
 		allTracks      []interfaces.Track
 		tracks         []interfaces.Track
