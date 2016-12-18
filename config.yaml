@@ -170,6 +170,20 @@ commands:
             many_tracks_added: "<b>%s</b> added <b>%d</b> tracks to the queue."
             num_tracks_too_long: "<br><b>%d</b> tracks could not be added due to error or because they are too long."
 
+    addsecret:
+        aliases:
+            - "adds"
+            - "as"
+        is_admin: false
+        description: "Adds a secret track or playlist from a media site to the queue."
+        messages:
+            no_url_error: "A URL must be supplied with the add command."
+            no_valid_tracks_error: "No valid tracks were found with the provided URL(s)."
+            tracks_too_long_error: "Your track(s) were either too long or an error occurred while processing them. No track(s) have been added."
+            one_track_added: "<b>%s</b> added a secret track to the queue..."
+            many_tracks_added: "<b>%s</b> added <b>%d</b> tracks to the queue."
+            num_tracks_too_long: "<br><b>%d</b> tracks could not be added due to error or because they are too long."
+
     addnext:
         aliases:
             - "addnext"
